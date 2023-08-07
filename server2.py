@@ -5,6 +5,7 @@ import threading
 import time
 import uuid
 from Processdataview import process_for_view
+import streamlit as st
 
 
 app = Flask(__name__)
@@ -15,6 +16,8 @@ user_data_ewkb = {}
 user_data_startDate = {}
 user_data_endDate = {}
 
+st.title("flask succes")
+print("succes")
 # Lock for accessing user_data
 data_lock = threading.Lock()
 
@@ -83,3 +86,4 @@ def get_user_data():
 if __name__ == '__main__':
     app.debug = True  # Enable debug mode
     app.run #(port=5002)  # By default, it will run on http://127.0.0.1:5002/
+
