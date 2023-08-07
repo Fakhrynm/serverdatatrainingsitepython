@@ -5,7 +5,6 @@ import threading
 import time
 import uuid
 from Processdataview import process_for_view
-import streamlit as st
 
 
 app = Flask(__name__)
@@ -16,7 +15,6 @@ user_data_ewkb = {}
 user_data_startDate = {}
 user_data_endDate = {}
 
-st.title("flask succes")
 print("succes")
 # Lock for accessing user_data
 data_lock = threading.Lock()
