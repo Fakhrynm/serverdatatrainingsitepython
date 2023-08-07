@@ -27,6 +27,12 @@ def clear_user_data(user_id):
         if user_id in user_data_ewkb:
             user_data_ewkb.pop(user_id)
 
+
+@app.route('/tes', methods=['GET'])
+def tes():
+    st.success("Selamat Server Jalan")
+
+
 @app.route('/process_data', methods=['POST'])
 def process_data():
     data = request.get_json()
@@ -76,4 +82,4 @@ def get_user_data():
 
 if __name__ == '__main__':
     app.debug = True  # Enable debug mode
-    app.run(port=5002)  # By default, it will run on http://127.0.0.1:5002/
+    app.run #(port=5002)  # By default, it will run on http://127.0.0.1:5002/
